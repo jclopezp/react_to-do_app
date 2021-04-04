@@ -1,3 +1,9 @@
+# React app for to-do list management
+Since I am starting in React, this project has been the result of the training course:
+https://youtu.be/twPtvZuBrAg By Fazt
+2021, Feb.16 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
