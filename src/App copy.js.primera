@@ -1,0 +1,64 @@
+/* import logo from './logo.svg'; */
+import React from 'react';
+import './App.css';
+
+/* function Helloworld(props) {
+  console.log(props)
+  return (
+  <div id="hello">
+    <h3>{props.subtitle}</h3>
+    [componente] {props.myText}
+    </div>
+  )
+} */
+
+class Helloworld extends React.Component {
+
+  state = {
+    show: false
+  }
+
+  toggleShow = () => {
+    this.setState({show: !this.state.show})
+  }
+
+  render() {
+    if (this.state.show){
+      return (
+        <div id="hello">
+          <h3>{this.props.subtitle}</h3>
+          {this.props.myText}
+          <button onClick={this.toggleShow}>Actualizar datos</button>
+    </div>
+  )
+    } else {
+      return <h1>
+        Loading ...
+        <button onClick={this.toggleShow}>Mostrar Datos</button>
+      </h1>
+    }
+    
+  }
+}
+
+// ----------------------------------------------------------------
+// Otras maneras de escribir el HTML
+/* const App1 = () => <div>This my component: <Helloworld/> </div>
+
+class App2 extends React.Component {
+  render() {
+    return <div>This is CLASS: <Helloworld/></div>
+  }
+} */
+
+function App() {
+  return (
+    <div>
+      This is my [component] 
+      <Helloworld myText="hello Fazt" subtitle="Lorem Ipsum"/>
+      <Helloworld myText="Carlos Lopez" subtitle="Lorem 2"/>
+      <Helloworld myText="hola REACT" subtitle="Lorem 3" /></div>
+  );
+}
+
+export default App;
